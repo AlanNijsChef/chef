@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Box</title>
+    <title>Nieuwe Bestelling</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
         .click-box {
-            width: 200px;
-            height: 200px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 50px;
             background-color: #4caf50;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
-        }
+             }
         .click-box:hover {
             background-color: #45a049;
             transform: scale(1.05);
@@ -40,12 +39,12 @@
 </head>
 <body>
     <div class="click-box" onclick="boxClicked()">
-        FOOD!
+        Nieuwe Bestelling
     </div>
 
     <script>
         function boxClicked() {
-            alert('Box clicked!');
+            alert('Nieuwe bestelling aangemaakt!');
         }
     </script>
 </body>
