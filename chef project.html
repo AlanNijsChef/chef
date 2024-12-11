@@ -26,7 +26,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
-             }
+        }
         .click-box:hover {
             background-color: #45a049;
             transform: scale(1.05);
@@ -35,16 +35,54 @@
             background-color: #3e8e41;
             transform: scale(0.95);
         }
+        .table-container {
+            margin-top: 100px;
+            padding: 10px;
+            display: none;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
-    <div class="click-box" onclick="boxClicked()">
+    <div class="click-box" onclick="showTable()">
         Nieuwe Bestelling
     </div>
 
+    <div class="table-container" id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Kaas</td></tr>
+                <tr><td>Kaas</td></tr>
+                <tr><td>Kaas</td></tr>
+                <tr><td>Kaas</td></tr>
+            </tbody>
+        </table>
+    </div>
+
     <script>
-        function boxClicked() {
-            alert('Nieuwe bestelling aangemaakt!');
+        function showTable() {
+            const tableContainer = document.getElementById('tableContainer');
+            tableContainer.style.display = 'block';
         }
     </script>
 </body>
