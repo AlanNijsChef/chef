@@ -3,126 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dish Management</title>
+    <title>Interactive Box</title>
     <style>
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
         }
-        .container {
-            max-width: 600px;
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        form {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background: #f4f4f4;
-        }
-        .btn {
-            display: inline-block;
-            padding: 8px 12px;
+        .click-box {
+            width: 200px;
+            height: 200px;
+            background-color: #4caf50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
         }
-        .btn-edit {
-            background: #4caf50;
+        .click-box:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
         }
-        .btn-ready {
-            background: #2196f3;
+        .click-box:active {
+            background-color: #3e8e41;
+            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Dish Management</h1>
-
-        <!-- Form for Adding/Updating Dishes -->
-        <form id="dishForm">
-            <label for="dishName">Dish Name:</label>
-            <input type="text" id="dishName" name="dishName" placeholder="Enter dish name" required>
-
-            <label for="category">Category:</label>
-            <select id="category" name="category" required>
-                <option value="">Select a category</option>
-                <option value="Vlees">Vlees</option>
-                <option value="Vega">Vega</option>
-                <option value="Dessert">Dessert</option>
-            </select>
-
-            <label for="price">Price (€):</label>
-            <input type="number" id="price" name="price" step="0.01" placeholder="Enter price" required>
-
-            <label for="status">Status:</label>
-            <select id="status" name="status" required>
-                <option value="">Select status</option>
-                <option value="Available">Available</option>
-                <option value="Not in Assortment">Not in Assortment</option>
-            </select>
-
-            <button type="submit">Save Dish</button>
-        </form>
-
-        <!-- Table for Viewing Dishes -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Dish Name</th>
-                    <th>Category</th>
-                    <th>Price (€)</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Spaghetti Bolognese</td>
-                    <td>Vlees</td>
-                    <td>12.50</td>
-                    <td>Available</td>
-                    <td>
-                        <a href="#" class="btn btn-edit">Edit</a>
-                        <a href="#" class="btn btn-ready">Mark as Ready</a>
-                    </td>
-                </tr>
-                <!-- Additional rows can be added here dynamically -->
-            </tbody>
-        </table>
+    <div class="click-box" onclick="boxClicked()">
+        FOOD!
     </div>
+
+    <script>
+        function boxClicked() {
+            alert('Box clicked!');
+        }
+    </script>
 </body>
 </html>
